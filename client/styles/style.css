@@ -1,0 +1,33 @@
+.header {
+  background-color: #444343;
+  color: WhiteSmoke;
+  height: 55px;
+}
+
+h1 {
+  /*font-weight: lighter;*/
+  font-size: 22px;
+}
+
+.container {
+  padding-top: 10px;
+}
+
+.movieInputs {
+  margin-top: 10px;
+}
+
+.movieDiv {
+  text-align: center;
+}
+
+.topRow {
+  height: 20px;
+}
+
+
+h2 {
+  font-weight: lighter;
+  font-size: 20px;
+  background-color: LightGray;
+}

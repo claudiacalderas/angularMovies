@@ -12,24 +12,43 @@
 
   </head>
   <body>
-    <div class="col-md-3 col-xs-4" ng-controller="FirstController">
-      <input type="text" ng-model="newMovie.name" placeholder="movie name">
-      <br>
-      <input type="text" ng-model="newMovie.desc" placeholder="movie description">
-      <br>
-      <input type="text" ng-model="newMovie.director" placeholder="director name">
-      <br>
-      <input type="text" ng-model="newMovie.length" placeholder="movie length">
-      <br>
-      <button type="button" ng-click="addMovie(newMovie.name, newMovie.desc, newMovie.director, newMovie.length)">Submit</button>
-    </div>
-    <div class="col-md-9 col-xs-4" ng-controller="SecondController">
-      <div ng-repeat="movie in movies">
-        <div class="col-md-4">
-          <h1>{{movie.name}}</h1>
-          <p>{{movie.desc}}</p>
-          <p>{{movie.director}}</p>
-          <p>{{movie.length}}</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 header">
+          <h1><span class="glyphicon glyphicon-film" aria-hidden="true"></span>  Angular Movies</h1>
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-4" ng-controller="FirstController">
+        <br><br>
+        <span>Name: </span>
+        <br>
+        <input type="text" ng-model="newMovie.name" placeholder="movie name">
+        <br><br>
+        <span>Description: </span>
+        <br>
+        <input type="text" ng-model="newMovie.desc" placeholder="movie description">
+        <br><br>
+        <span>Director: </span>
+        <br>
+        <input type="text" ng-model="newMovie.director" placeholder="director name">
+        <br><br>
+        <span>Length: </span>
+        <br>
+        <input type="text" ng-model="newMovie.length" placeholder="movie length">
+        <br><br>
+        <button type="button" ng-click="addMovie(newMovie.name, newMovie.desc, newMovie.director, newMovie.length)">Submit</button>
+      </div>
+      <div class="col-md-8 col-xs-4" ng-controller="SecondController">
+        <div class="row topRow">
+          <p> </p>
+        </div>
+        <div ng-repeat="movie in movies">
+          <div class="col-md-4 movieDiv thumbnail">
+            <h2>{{movie.name}}</h2>
+            <p>{{movie.desc}}</p>
+            <p>{{movie.director}}</p>
+            <p>{{movie.length}}</p>
+          </div>
         </div>
       </div>
     </div>
